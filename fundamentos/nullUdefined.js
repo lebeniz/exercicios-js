@@ -18,4 +18,6 @@ console.log(!!produto.nome);//undefinede é do tipo falso na logica booleana
 console.log(produto);
 //para zerar a variavel, use delete
 
+produto.preco = null;// produto sem preço
+
 
