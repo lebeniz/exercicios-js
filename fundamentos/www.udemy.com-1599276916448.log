@@ -1,0 +1,81 @@
+window
+Window {parent: Window, opener: null, top: Window, length: 3, frames: Window, …}
+this
+Window {parent: Window, opener: null, top: Window, length: 3, frames: Window, …}
+this === window
+true
+var a = 'Texto';
+undefined
+window.a
+"Texto"
+var a = 123;
+undefined
+window.a
+123
+this.a
+123
+let b = 123
+undefined
+window.b;
+undefined
+window.b; //variavel do tipo b, não vai para o objeto
+undefined
+//global window ou this, embora ela seja no momento global
+undefined
+this.b;
+undefined
+b ;
+123
+const c = 456; 
+undefined
+window.c;
+undefined
+this.c;
+undefined
+c
+456
+//const c foi declarado em um scopo global, mas, como o let
+undefined
+// ela  não entra no objeto global window e this
+undefined
+function f1() { return (window === this ) }
+undefined
+f1();
+true
+window.f1();
+true
+this.f1();
+true
+const ff = () => console.log(window === this);
+undefined
+ff()
+entry-main-modern-vendor.fc738c248e9ab637a44e.js:1 true
+undefined
+window.ff();
+VM2924:1 Uncaught TypeError: window.ff is not a function
+    at <anonymous>:1:8
+(anonymous) @ VM2924:1
+//da erro peolo mesmo motivo de uma const
+undefined
+let pessoa = { nome:'ana', falar: function () { 'Eu Sou' ${this.name} }}
+VM3267:1 Uncaught SyntaxError: Unexpected identifier
+let pessoa = { nome:'ana', falar: function () { return 'Eu Sou' ${this.name} }}
+
+VM3286:1 Uncaught SyntaxError: Unexpected identifier
+let pessoa = { nome:'ana', falar: function () { return `Eu Sou ${this.name}` }}
+
+
+undefined
+pessoa.falar
+ƒ () { return `Eu Sou ${this.name}` }
+pessoa.falar()
+"Eu Sou undefined"
+let pessoa = { nome:'ana', falar: function () { return `Eu Sou ${this.nome}` }}
+
+undefined
+pessoa.falar()
+"Eu Sou ana"
+this.pessoa
+undefined
+pessoa
+{nome: "ana", falar: ƒ}
