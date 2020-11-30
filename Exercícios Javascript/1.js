@@ -1,8 +1,8 @@
-function op(a=0, b=0){
-    console.log('soma =', a+b)
-    console.log('subtração =', a-b)
-    console.log('multiplicação =', a*b)
-    console.log('divisão =', a/b)
+//Crie uma função que retorna a string "Olá, " concatenada com um argumento text (a ser passado para a
+//  função) e com ponto de exclamação "!" no final.
+
+function cumprimentar(nome){
+    return console.log(`"Ola, ${nome}!"`);
 }
 
-op(2,3);
+cumprimentar("bruno");

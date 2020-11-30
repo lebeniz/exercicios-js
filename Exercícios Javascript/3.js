@@ -1,5 +1,12 @@
-function eponencial(a, b){
-    return Math.pow(a, b);
+/*
+Desenvolva uma função que recebe dois parâmetros, um é a quantidade de horas trabalhadas por um
+funcionário num mês, e o quanto ele recebe por hora. O retorno da função deve ser a string "Salário igual a R$
+X", em que X é o quanto o funcionário ganhou no mês.
+*/
+
+function salarioMensal(horas, pagamentoPorHoras){
+    let salario = horas * pagamentoPorHoras;
+    return console.log(`"salario igual a R$ ${salario}"`);
 }
 
-console.log(eponencial(2, 3))
+salarioMensal(150, 5.867);
