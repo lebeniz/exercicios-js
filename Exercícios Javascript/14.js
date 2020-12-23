@@ -5,13 +5,24 @@ exemplos abaixo para um melhor entendimento:
 */
 
 function objetoParaArray(obejeto){
-    let array =[];
+    let aux = [];
     let aux1 = [];
     let aux2 = [];
+    let array =[];
+    let j = 0
+    for(let i in obejeto){
+        aux[j] = i;
+        j++;
+    }
+    aux1[0] = aux[0];
+    aux1[1] = obejeto.nome;
+    aux2[0] = aux[1];
+    aux2[1] = obejeto.profissao;    
+    array[0] =aux1;
+    array[1] = aux2;
+
     //console.log(Object.keys(obejeto))
-    aux1[0] = Object.getOwnPropertyNames(obejeto)
-    aux1[1] = obejeto.nome
-    array[0] = aux1;
+ 
     return array;
 }
 
