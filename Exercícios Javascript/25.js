@@ -8,24 +8,13 @@ buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]) //
 buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]) // retornará []
 */
 
-function buscarPalavrasSemelhantes(string, arrayDeString){
-    let b,c, a = [];
-    b = 0;
-    for(i = 0; i < arrayDeString.length; i++){
-        let z=0;
-        do{
-            let c = 0;
-            for(j = b; j < arrayDeString.length; j++){
-                if(string[c] == arrayDeString[j]){
-                    a[i] = a[i] + 1;
-                }
-                c++;
-            }
-            b++;
-        }while(a[i]!=3 || j < arrayDeString.length)
-        console.log(a);
+function buscarPalavrasSemelhantes(inicio, palavras) {
+    const resultado = []
+    for (let palavra of palavras)
+    if (palavra.includes(inicio))
+    resultado.push(palavra)
+    return resultado
     }
     
-}
 
-buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"])
+console.log(buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]));
