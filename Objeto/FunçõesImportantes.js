@@ -12,7 +12,7 @@ Object.entries(pessoa).forEach(([chave, valor]) => {
      console.log(`${chave}: ${valor}`);
 });
 
-Object.defineProperty(pessoa, 'dataNacimento',{
+Object.defineProperty(pessoa, 'dataNacimento',{// cria um novo atributo para o obj com especificações
     enumerable: true, //será enumeravel
     writable: false, //não será modificavel
     value: '01/20/2020'
