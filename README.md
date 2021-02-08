@@ -1,2 +1,0 @@
-# exercicios-js
-exercicios-js

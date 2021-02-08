@@ -1,0 +1,7 @@
+#textoPrinciapl{/* id */
+    font-size: 40px;
+    font-weight: bold;
+    color: whitesmoke;/* ou #fff para cor branca */
+    padding: 10px;
+    background-color: slategrey;/* #444  para cinza*/
+}

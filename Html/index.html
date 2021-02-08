@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <style>
+        #conteudo {/* customizando  o id*/  
+            padding: 30px 0px;/*30px em cima e ebaixo e 0px na lateral esquerda e direita*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href wn-nav="exercicios/teste.html">00-Teste</a> |-| 
+        <a href wn-nav="exercicios/texto1.html">00-Teste 1</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer><!-- footer é o rodapé-->
+       <!--<br> quebra linha-->
+        Curso de Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[ wn-nav]').forEach(link =>{//intercepta cada link e devolve o conteudo
+            const conteudo = document.getElementById('conteudo')//pega elmento do id e passa a tag do id
+
+            link.onclick = function(e){// (e) é o evento que vai acontecer
+                e.preventDefault()/*essa função previne q o comportamento padrão q é a navegação ocorra
+                ou seja ele da uma pausa após o click*/
+                fetch(link.getAttribute('wn-nav'))/*chamada ajax a partir do link, ou seja, ele consegue o link da pagina*/
+
+                    .then(resp => resp.text())/*tendo o link, ele usa a função .text() para 
+                    pegar o conteudo da pagina q foi feita a requisição*/
+
+                    .then(html => conteudo.innerHTML = html)/*como o conteudo obtido é um html, passa o html para
+                     conteudo formando um novo html através do objeto innerHTML*/
+            }
+        })
+    </script>
+</body>
+</html>
