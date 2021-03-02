@@ -1,6 +1,13 @@
 " : " dois ponto separa o codico da explicação
 
+npm install -g nodemon
 npm i -g http-server    :serve para criar um mine servidor na maquina
 http-server -p numero da porta .    :inicia o servido com porta escolhida
 http-server . -c-1 .    :inicia o servido com função cache desligada
 http-server . -c10 .    :inicia o servido com função cache guardando informação por 10 segundos
+
+
+comando powshell para a execução de script
+
+Set-ExecutionPolicy RemoteSigned    :controlar estas permissões usando o cmdlet
+Get-ExecutionPolicy :qual a política de execução atual usando o cmdlet

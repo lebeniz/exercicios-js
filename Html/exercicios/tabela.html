@@ -1,0 +1,55 @@
+<!--A table é uma tabela, ela é parecida com uma pagina, tem cabeçalho corpo tags... -->
+<table border="1"><!--border, cria borda em toda a table-->
+    <caption>produtos</caption>
+    <thead><!--thead defina area em que voucolocar o cabeçalho da tabela-->
+        <tr><!--tr é tableroll, isso é uma linha de dados de cabeçalho-->
+            <th>produto</th><!--th, isso é uma coluna de dados para cabeçalho-->
+            <th>preço</th>
+            <th>quantidade</th>
+            <th>total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ipad</td><!--td é tabledata, isso é uma coluna de dados-->
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+        <tr>
+            <td>samsumg s9</td>
+            <td>2649,00</td>
+            <td>8</td>
+            <td>21192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">total</td><!--colspan é uma propriedade para usar o espaço de 3 colunas-->
+            <td>37637,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {/*o estilo será aplicado em table*/
+        border-collapse: collapse;/*propriedade para não ter borda*/
+    }
+
+    th, td {
+        padding: 10px;/*padding faz com que o elemento crie espaço entre si*/
+    }
+
+    thead tr {/*vai aplicar o estilo apenas no tr que está em thead*/
+        border-bottom: solid 3px #000080;/*borda solida azul com 3px */
+    }
+    tbody tr:hover {/*tbody tr, estilo aplicado no tr do tbody. hover,estilo será aplicado quando o mause passar por cima*/ 
+        background-color: #90ee90;/* verde bem claro*/
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;/*fonte do foot em negrito*/
+    }
+</style>
+<a href="index.html">Voltar 1</a><br>

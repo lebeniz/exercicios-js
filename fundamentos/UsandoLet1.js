@@ -7,10 +7,10 @@ console.log('fora =', numero);
 //outro caso
 let teste = 1
 {
-    let teste2 = 2
+    let teste = 2
     console.log('dentro =', teste);//na hora de imprimir ele busca o valor que esta mais proximo, que o escopo externo
 }
 console.log('fora =', teste);
 
 //Obs. variaveis definida com a palavra resevada var: tem escopo global e tem escopo de função
-//Obs. variaveis definida com a palavra resevada le: tem escopo global , tem escopo de função e escopo de bloco
+//Obs. variaveis definida com a palavra resevada let: tem escopo global , tem escopo de função e escopo de bloco
