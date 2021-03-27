@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #02</title>
+    <style>
+        .fora {
+            position: relative;
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 50px;/*400 é o tamanho, mais o padding de 50 cada vai da 500pc*/
+        }
+        .dentro {
+            background-color: mediumvioletred;
+            width: 100%;
+            height: 100px;
+            position: static;/*posição padrão para quando não declara a posição*/
+            position: relative;/*ocupa 100% do conteudo da div interna*/
+            position: absolute;/* ocupa 100% + uma parte do padding + uma parte de fora, um erro loco*/
+            position: fixed;/*aumenta em relação a tela, bizarro*/
+        }
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro"></div>
+    </div>
+</body>
+</html>

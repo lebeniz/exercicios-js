@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        /* ... */
+        * {
+            margin: 0;
+        }
+        html {
+            font-size: 28px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div {
+            font-size: 50px;
+        }
+        p {
+            /*valores padrão*/
+            font-size: 1em;/*1x o tamanho padrão*/
+            font-size: 100%;/*mesma coisa a anterior*/
+            font-size: 16px;/*mesma coisa*/
+            font-size: 12pt;/*12pt é 12 pontos que é equivalente a 16px*/
+
+            /*unidades absolutas*/
+            font-size: 100px;/*o tamanho do px é relativo a densidade da tela do usuario*/
+            font-size: 72pt;/*é equivalente a 1 polegada*/
+            font-size: 1in;/*é equivalente a 1 polegada*/
+            
+            /* unidades relativas */
+            font-size: 2.2em;/*2.2x a font mais proxima, que no caso é a font da div*/
+            font-size: 2.2rem;/*2.2x a font do html que é a font raiz*/
+            /*so vai mudar caso mude a font do html, fazendo html{font-size: 30px;} */
+            font-size: 30vh;
+            font-size: 5vw;
+
+            /*tipos de font*/
+            font-family: monospace;/*todas as letras tem o mesmo espaço*/
+            font-family: Georgia, serif;/*fonte xerifada*/
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            font-weight: 900;/*peso da fonte*/
+            font-style: italic;
+            text-transform: uppercase;
+            /* text-decoration: overline underline line-through; */
+            word-spacing: -10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .botao  {
+            text-decoration: none;/*tira a linha embaixodo do texto*/
+            font-size: 28px;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+        .destaque {
+            color: green;
+            background: yellow;
+            box-shadow: 2px 2px 1px 1px #000;/*sombra na box*/
+            
+        }
+        .destaque:hover{
+            background: red;
+            color: blue;
+
+        }.destaque:active {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>

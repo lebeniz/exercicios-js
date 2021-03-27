@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <style>
+        body {/*css interno*/
+            background-color: aquamarine;
+        }
+    </style>
+    <link rel="stylesheet" href="css/externo.css"><!--css externo-->
+    <!-- o ultimo css processado é quem tem a prioridade -->
+</head>
+
+<body>
+    <h1 style="background-color: coral;">E agora?</h1><!--css inline, e o css inline tem prioridade sobre os outros css -->
+</body>
+
+</html>

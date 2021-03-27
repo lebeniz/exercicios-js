@@ -1,0 +1,47 @@
+<h1>Formulário</h1>
+
+<form method="POST"><!--formulario que tem um ação, que faz a requição do link usando o metodo post-->
+    <!--metodo GET ou POST, tem q ser escrito em maiusculo-->
+    <!-- a vantagem do get em relação ao post é que o get da as informação na url, assim vc pode dar um Enter para pegar novamente as informação no back-end de novo caso necessario, porem na url pode conter a senha, por isso get não é seguro-->
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome">
+    <input type="password" name="senha">
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="admin">Admin
+        <input type="radio" name="tipo" value="regular">Regular
+        <input type="radio" name="tipo" value="professor">Professor
+    </div>
+    <div>
+        <input type="checkbox" name="ativo">Ativo
+    </div>
+
+    <select name="estado" >
+        <option value="">Selecione seu Estado</option>
+        <option value="ac">Acre</option>
+        <option value="ba">Bhaia</option>
+        <option value="ce">Ceará</option>
+    </select>
+
+    <select name="interesses" multiple size="7">
+        <option value="js">Js</option>
+        <option value="java">Java</option>
+        <option value="php">Php</option>
+        <option value="python">Python</option>
+        <option value="go">Go</option>
+        <option value="c">C</option>
+    </select>
+
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+</form>
+
+<style>
+    input, textarea, select {
+        display: block;/*foma com aparece a estrutura, se é em bloco, linha ...etc*/
+        margin-bottom: 10px;/*da espaço entre um input e outro*/
+    }
+    input[type = radio], input[type = checkbox] {
+        display:inline
+    }
+</style>

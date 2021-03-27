@@ -11,3 +11,11 @@ comando powshell para a execução de script
 
 Set-ExecutionPolicy RemoteSigned    :controlar estas permissões usando o cmdlet
 Get-ExecutionPolicy :qual a política de execução atual usando o cmdlet
+
+Comandos a ser estudados
+npm init -y
+
+ npm i --save express@4.16.3 body-parser@1.18.2 -E  :cria a pasta com as depedencia do node_modules
+ e os arquivos package-lock.json, package.json.
+
+ npm i --server-dev nodemon :intala o nodemon

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;/*valor pré definido para setar o texto no meio*/
+            /*multiplos valores*/
+            border: solid 5px navy; /*coloca a borda em volta do texto na linha inteira
+            /*propriedades de acessos mais rapidos*/
+            /*solid é um tipo de bord*/
+            
+            font-family: Helvetica, sans-serif;/*multiplas opçoes para que caso não encontre uma aplica-se a outra*/
+            
+            /*funções*/
+            width: calc(100% - 40px);/*função como css para diminuir o espaçamento do texto*/
+            background-color: rgb(34, 153, 189);/*r=red, g=green, b=blue*/
+        }
+        /* usando uma pseudo-classe */ 
+        .seletor:hover {/*ao passar o mause por cima a cor muda por causa da pseudo-classe*/
+            background-color: orangered;
+        }
+
+        /* usando um pseudo-elemento */ 
+        .seletor::first-letter{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* padrão de nomeclatura? */
+        /* dash-case ou cameCase? */
+        /* dash-case, nomes separados por - */
+        /* cameCase, nomes separados por letras maiusculas ex. cameCase*/
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>
