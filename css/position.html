@@ -5,13 +5,64 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div, a {
+            font-size: 30px;
+            padding: 15px;
+            border: solid 5px #222;
+        }
+        #static {
+            top: 100px;/*não faz diferença por que a posição é estatica*/
+            left: 100px;/* a mesma coisa*/
+            background-color: steelblue;
+        }
+        .fixed {
+            position: fixed;/*fixa o elemto */
+            bottom: 30px;/*o posicionamento vai está a 30px do bottom da pagina que é o fim da pagina, e se move de acordo com o fim da pagina*/
+            text-decoration: none;
+            color: #fff;
+            background-color: blue;
+            right: 0px;/* cola o fixeda na lateral direita inferior a 0 px de distancia da parede*/
+        }
+        .relative1{
+            position: relative;/*se posiciona em relação ao anterior que nesse caso é o static*/
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+        .absolute1 {
+            position: absolute;
+            left: 350px;/*350px de distancia da lateral esquerda pagina*/
+            top: 120px;
+            background-color: violet;
+        }
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+        .absolute2 {
+            position: absolute;/*a posição será absoluta em relação a div enquanto ela tiver uma posição definida, que no caso agora é position: relative;, caso contrario a posição será relativa ao body*/
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+        .sticky {
+            position: -webkit-sticky;/*serve para o navegardo safari reconhecer o comando position: sticky;*/
+            position: sticky;/*quando dece a pagina, o sticky fica parado sem sair da visão*/
+            background-color: #777;
+            top: 0px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="static">Static (Padrão)</div>
-    <div class="fixed">Fixed</div>
+    <div id="static">Static (Padrão)</div>
+    <a class="fixed" href="#static">Fixed</a>
     <div class="relative1">Relative</div>
     <div class="absolute1">Absolute</div>
 

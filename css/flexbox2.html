@@ -6,7 +6,38 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container div{
+            box-sizing: border-box;
+        }
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+        .flex-container div:nth-child(3){
+            background: indianred;
+            order: 1;/*todos os itens do flex conteiner tem prioridade 0, ordem 0, mudando para o 1, ele passa a ser o ultimo elemento a ser considerado*/
+            order: -1;/*quanto menor a order maior a prioridade*/
+            align-self: center;/*centraliza no espaço que ele tem*/
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch;/*posicionamento padrão*/
+        }
+        .flex-container div{
+            width: 100px;
+            flex-grow: 0;
+            flex-grow: 1;
+        }
+        .flex-container div:nth-child(1){/*da um peso maior para aumentar o tamanho da box*/
+            flex-grow: 2;
+        }
+        .flex-container{
+            width: 300px;
+            flex-shrink: 1;
+        }
+        .flex-container div:nth-child(1){/*da um peso menor para diminuir o tamanho do box*/
+            flex-shrink: 2;
+        }
     </style>
 </head>
 

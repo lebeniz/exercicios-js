@@ -12,6 +12,17 @@
             border: solid 5px;
             display: none;
         }
+
+        /*@media: condição para alterar o conteudo diacordo com o tamanho da tela, muito usado para facilitar uso de site em celular e site*/
+        @media (max-width: 600px) {/*so vai agir quando a largura maxima for 600px ou menos*/
+            .muito-pequeno { display: block;}
+        }
+        @media (max-width:1000px), (orientation: portrait){/*se a tela tiver 1000px ou estiver em modo retrato, o display será visivel, se nenhum acontecer, não aparece nada*/
+            .pequeno-retrato { display: block;}
+        }
+        @media(min-width: 500px) and (max-width:1000px) {/*se os dois for vdd, o display aparece*/
+            .intervalo {display: block;}/*block = a bloco, de visivel*/
+        }
     </style>
 </head>
 <body>

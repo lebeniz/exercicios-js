@@ -22,6 +22,39 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;/*define a organização das colunas, nesse caso divide em duas colunas com cada uma com 50% do espaço*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/*cria 12 colunas com espaço de 8.33% cada*/
+            grid-template-columns: repeat(4, 8.33%);/*cria 4 colunas com 8.33% de espaço cada*/
+            grid-template-columns: repeat(12, 8.33%);
+            grid-template-columns: repeat(11, 100px) 100px;/*multiplica 11 vezes 100px + 100px criando 12 colunas de 100px cada*/
+            grid-template-columns: 200px 20% 1fr;/*vai cria 3 colunas, uma com 200px fixo, a segunda vai ter 20% que varia de acordo com o tamanho do bady, e a terceira vai pegar todo o resto do espaço que sobrou*/
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr;
+            grid-template-rows: 100px auto auto auto;/*define a primeira linha com 100px fixo, e as demais com tamanho igual entre elas*/
+
+        }
+        .d8 {
+            grid-column-start: 2;/*ocupa da coluna 2 e vai ate a 4*/
+            grid-column-end: 4;
+            grid-column-end: span 2;/*a mesma coisa*/
+            grid-row-start: 3;/*ocuapa da linha 3 até a 5*/
+            grid-row-end: 5;
+            grid-row-end: span;/* a mesma coisa*/
+        }
+        .d10, .d11 {
+            /* CUIDADO! Elas podem se sobrepor*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+        .d10{
+            z-index: 10;/*organiza a profundidade dos elementos da pagina, ou seja quem vai ficar na frente de quem*
+            /* nesse caso se colocar qualquer numero <= 0 vai fazer com que o 10 se sobreponha em relação ao 11*/
+        }
     </style>
 </head>
 
