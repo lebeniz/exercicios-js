@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        // jquery é referenciado com $ 
+        // .hide(5000) esconde o elemento em 5 segundos
+        // .show(5000) mostra o elemento depois de 5 segundos 
+        // .fadeOut(5000) some com o elemento
+        $('div').hide(5000).show(10000).fadeOut(15000)
+        console.log($('div').get(0));
+        console.log($.isEmptyObject({nome: null}))
+        // jQuery = $ os dois serve para referenciar 
+
+        console.log(jQuery.inArray(3, [1,2,3]))//o numero 3 está dentro do array? vai retonar o próprio indece no qual o numero 3 estar
+
+        $.fn.nomeDaFunçao = function() {//  $.fn referencia para crair um elemento jquery
+            this.css('background-color', 'green')//manipua as propriedade do css de forma dinamica
+            return this// retorna essa manipulação atravez do objeto
+        }
+
+        $('body').nomeDaFunçao().fadeOut(20000)//seleciono o body, aplico o css e depois aplica o fadeOut
+    </script>
+</body>
