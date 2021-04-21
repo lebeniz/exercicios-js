@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a esperar-um-pouco href="https://google.com.br" >Google</a><!--Um atributo personalizado so serve para ser usado pleo javascypt, o browser ingnora.
+        Então isso significa uma coisa, que esse link será manipulad pelo js-->
+
+
+        <!-- onclick="navegarEm5s(event)"associa o clique a funçao que imterrompe o evento -->
+    </div>
+    <script>
+        function navegarEm5s(e) {
+            e.preventDefault()/*previne que um comportamento padrão ocorra*/
+            console.log('saindo em 5s....');
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href/*target é o elemento html que disparou o evento, se eu cliquei no link, e.target é o próprio link*/
+            }, 5000)
+        }
+
+        //outra forma
+        // const a = document.querySelector('a')
+        // a.onclick = navegarEm5s/*associa o clic a função que interrompe a navegação por 5 segundo*/
+
+        //outra forma e a mais equilibra 
+        const a = document.querySelector('[esperar-um-pouco]')
+        a.onclick = navegarEm5s
+    </script>
+</body>

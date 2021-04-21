@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5"><!--destino é um seletor personalizado, ou seja, não é padrão do js-->
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]')/*usando o seletor personalizado*/
+        console.log('Elemento "ul"............')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)/*dessa forma o browser não reconhece, pois, o atributo é personalizada, sendo assim o browser não tem conhecimento a respeito*/
+        console.log('getAtribute', lista.getAttribute('destino'))/*já nesse caso, reconhece por causa da função getatribute*/
+        console.log('hasAtribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa')/*muda o valor de destino para empresa*/
+        lista.setAttribute('status', 'aberto')/*criar o atributo status com value aberto*/
+        console.log('status', lista.getAttribute('status'))
+        lista.removeAttribute('destino')
+        console.log(lista.dataset)
+        lista.dataset.urgencia = 4 
+        console.log(lista.getAttribute('data-urgencia'))  
+
+        //cuidado
+        const label = document.querySelector('label')
+        console.log(label.for)/*não é possivel acessar dessa maneira, pois a palavra for, é uma palavra resevada da linguagem*/
+        console.log(label.htmlFor)/*forma correta*/
+        console.log(label.getAttribute('for'))/*outra forma correta*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        //O css aplicado nas divs é por ordem de entrada, cada posição tem uma cor diferente
+        const body = document.querySelector('body')
+        
+        const div1 = document.createElement('div')/*cira a div*/
+        div1.classList.add('destaque')/*aplica css na div*/
+        div1.innerHTML = 'Primeiro'/*cria o texto da div, ou seja o conteudo*/
+       
+        const div2 = document.createElement('div')/*cria um elemento do tipo div*/
+        div2.setAttribute('wm-atribute', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')/*cria um elemento do tipo paragráfo*/
+        p.innerHTML = 'terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p)/*add o p como ultimo filho da div*/
+
+        body.appendChild(div1)/*add elemento como ultimo filho do body*/
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        const texto = document.createTextNode('Antes...')/*cria o elemento texto com valor Antes...*/
+        div3.insertBefore(texto, div3.childNodes[0])/*insere o elemento texto na div3 antes do filho 0*/
+
+        const div4 = div3.cloneNode(true)/*clona o div3 por completo até seus filho, se o argumento passado fosse false
+        , cloanaria apenas o div3 sem os filhos*/
+        body.appendChild(div4)/*ele recebe um cor diferente por causa da posição*/
+        body.removediv3(div3)/*ao remover, a div4 recebe a cor da div3, pois, o css é aplicado em cada div referente a sua posição*/
+    </script>
+</body>
+
+</html>
