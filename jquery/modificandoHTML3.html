@@ -13,13 +13,25 @@
     <div id='conteudo'></div>
 
     <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
-        
-        // ...
+        $(function () {//fnção calback, quando o html da tabela estiver pronto, a função chama a tabela
+            // $(document).ready(function () {//qunado o documento estiver pronto, chame essa função para executar
+            const pessoas = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 }
+            ]
+
+            const linhas = pessoas.map(p => {
+                const tdNome = $('<td>').html(p.nome)
+                const tdNota = $('<td>').append(p.nota)
+                return $('<tr>').append(tdNome).append(tdNota)
+            })
+
+            const tabela = $('<table>').append(linhas).css('border', 'solid 5px')
+
+            $('#conteudo').html(tabela)
+        })
+
     </script>
 </body>

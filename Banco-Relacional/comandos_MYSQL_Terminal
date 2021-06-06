@@ -1,0 +1,3 @@
+mysql -u root -p    :entra no mysql
+use wm  :usa o banco de dados wm
+select * from estado;   :seleciona todos de estados
